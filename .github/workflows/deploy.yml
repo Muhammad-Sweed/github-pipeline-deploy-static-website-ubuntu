@@ -23,6 +23,6 @@ jobs:
           key: ${{ secrets.PRI_KEY }} 
                     
           script:
-             github-pipeline-deploy-static-website-ubuntu/scripts/github.sh
+             sudo cp -r github-pipeline-deploy-static-website-ubuntu/index.html /var/www/test1.com/
              
          
