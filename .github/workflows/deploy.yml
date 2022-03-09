@@ -23,4 +23,6 @@ jobs:
           key: ${{ secrets.PRI_KEY }} 
                     
           script:
-             touch 123 && ls -all
+             github-pipeline-deploy-static-website-ubuntu/scripts/github.sh
+             
+         
