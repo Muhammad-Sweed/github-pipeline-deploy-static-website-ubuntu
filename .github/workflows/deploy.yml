@@ -23,5 +23,5 @@ jobs:
           key: ${{ secrets.PRI_KEY }} 
                     
           script:
-             /scripts/github.sh
+             scripts/github.sh
              echo 'Deployment successful to digital ocean'
