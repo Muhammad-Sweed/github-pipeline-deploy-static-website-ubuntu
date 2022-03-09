@@ -17,4 +17,4 @@ jobs:
 
                          script:
                              /scripts/github.sh
-                              echo 'Deployment successful to digital ocean'
+                              echo 'Deployment1 successful to digital ocean'
