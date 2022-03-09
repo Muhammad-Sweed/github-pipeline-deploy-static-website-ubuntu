@@ -15,7 +15,7 @@ jobs:
         with:
           host: ${{secrets.HOST}} 
           username: ${{secrets.USERNAME}} 
-          key: ${{secrets.PRI_KEY}} 
+          key: ${{secrets.PRIV_KEY}} 
                     
           script:
              /scripts/github.sh
