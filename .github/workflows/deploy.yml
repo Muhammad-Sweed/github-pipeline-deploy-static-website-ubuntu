@@ -4,13 +4,14 @@ jobs:
         deploy:
                 runs-on: ubuntu-latest
                 steps:
-                    - uses: actions/checkout@master 
+                    - name: deploy website
+                      uses: actions/checkout@master 
                     - name: deploy website to test.com
                       uses: appleboy/ssh-action@master
                       with:
-                         HOST: ${{ secrets.HOST }}
-                         USERNAME: ${{ secrets.USERNAME }}
-                         KEY: ${{ secrets.PRI_KEY }}
+                         host: ${{secrets.HOST}}
+                         username: ${{secrets.USERNAME}}
+                         key: ${{secrets.PRI_KEY}}
 
                          script:
                              /scripts/github.sh
