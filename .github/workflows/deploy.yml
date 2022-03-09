@@ -24,4 +24,3 @@ jobs:
                     
           script:
              ls 
-             echo 'Deployment successful to digital ocean'
