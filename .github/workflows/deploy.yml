@@ -2,7 +2,7 @@ name: website deployment
 on: [push]
 jobs:
         deploy:
-                runs-on: 170.187.151.252
+                runs-on: ubuntu-latest
                 steps:
                     - uses: actions/checkout@master
                     - name: deploy website to test.com
@@ -13,6 +13,6 @@ jobs:
                          PORT: ${{ secrets.PORT }}
                          KEY: ${{ secrets.KEY }}
                       with:
-                          source: "dest/*"
+                          source: "/*"
                           target: "/var/www/test1.com/public_html"
                           strip_components: 1
