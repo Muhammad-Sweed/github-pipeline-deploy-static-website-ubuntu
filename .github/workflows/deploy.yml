@@ -2,7 +2,7 @@ name: website deployment
 on: [push]
 jobs:
         deploy:
-                runs-on: ubuntu-latest
+                runs-on: 170.187.151.252
                 steps:
                     - uses: actions/checkout@master
                     - name: deploy website to test.com
