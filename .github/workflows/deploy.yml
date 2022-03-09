@@ -1,20 +1,22 @@
-name: website deployment
-on: 
- push:
-    branches: [ main ]
-jobs:
-        deploy:
-                runs-on: ubuntu-latest
-                steps:
-                    - name: deploy website
-                      uses: actions/checkout@v2
-                    - name: deploy website to test.com
-                      uses: appleboy/ssh-action@master
-                      with:
-                         host: ${{secrets.HOST}}
-                         username: ${{secrets.USERNAME}}
-                         key: ${{secrets.PRI_KEY}}
-
-                         script:
-                             /scripts/github.sh
-                              echo 'Deployment1 successful to digital ocean'
+name: Build & Deploy
+on:  
+  push:
+    branches: [ master ]
+jobs:  
+  deploy:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest    
+    steps:   
+     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Deploy Restaurant Advanced App     
+        uses: actions/checkout@v2
+      - name: Connects to VPS via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.HOST}} 
+          username: ${{secrets.USERNAME}} 
+          key: ${{secrets.PRI_KEY}} 
+                    
+          script:
+             /scripts/github.sh
+             echo 'Deployment successful to digital ocean'
