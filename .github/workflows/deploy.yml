@@ -23,5 +23,5 @@ jobs:
           key: ${{ secrets.PRI_KEY }} 
                     
           script:
-             touch 123
-             ls /var
+             sudo touch /home/123
+             sudo ls /home/
