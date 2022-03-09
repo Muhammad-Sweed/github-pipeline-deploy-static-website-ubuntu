@@ -23,5 +23,4 @@ jobs:
           key: ${{ secrets.PRI_KEY }} 
                     
           script:
-             touch /home/123
-             ls /home/
+             touch 123 && ls -all
