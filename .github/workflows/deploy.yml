@@ -10,7 +10,7 @@ jobs:
                       with:
                          HOST: ${{ secrets.HOST }}
                          USERNAME: ${{ secrets.USERNAME }}
-                         KEY: ${{ secrets.KEY }}
+                         KEY: ${{ secrets.PRI_KEY }}
 
                          script:
                              /scripts/github.sh
