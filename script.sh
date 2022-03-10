@@ -1,0 +1,1 @@
+echo "buddy is love"
