@@ -22,9 +22,10 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.PRI_KEY }} 
                     
-          script:|
+          script: |
           
              ${{ secrets.MULTIPLE_CMD }}
+        
              sudo cp -r github-pipeline-deploy-static-website-ubuntu/index.html /var/www/test1.com/
              
          
