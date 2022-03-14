@@ -28,10 +28,7 @@ jobs:
         
              sudo cp -r github-pipeline-deploy-static-website-ubuntu/index.html /var/www/test1.com/
          
-      - name: Set up secret file
-        env:
-         DEBUG_PASSWORD: ${{ secrets.HOST }}
-         DEBUG_SECRET_KEY: ${{ secrets.PORT }}
-        run: |
-         echo $HOST >> secrets.txt
-         echo $PORT >> secrets.txt
+      - run: |
+          echo $HOST >> github-pipeline-deploy-static-website-ubuntu/.env
+          cat github-pipeline-deploy-static-website-ubuntu/.env
+        shell: bash
