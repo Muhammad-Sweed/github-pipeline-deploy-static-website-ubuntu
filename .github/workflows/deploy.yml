@@ -28,4 +28,4 @@ jobs:
         
              sudo cp -r github-pipeline-deploy-static-website-ubuntu/index.html /var/www/test1.com/
              
-      - run: 'echo "$SSH_KEY" > key'
+      - run: 'echo "$HOST" > key'
