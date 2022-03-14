@@ -30,7 +30,7 @@ jobs:
       - name: write secret file  
         uses: DamianReeves/write-file-action@v1.0
         with:
-          path: ${{ env.home }}/.bashrc
+          path: ${{ env.home }}/ /~
           contents: |
             echo "{{ secrets.HOST }}"
             write-mode: append
