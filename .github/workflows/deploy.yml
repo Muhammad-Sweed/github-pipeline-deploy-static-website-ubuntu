@@ -28,7 +28,4 @@ jobs:
         
              sudo cp -r github-pipeline-deploy-static-website-ubuntu/index.html /var/www/test1.com/
          
-      - run: |
-          echo ${{ secrets.HOST }} >> github-pipeline-deploy-static-website-ubuntu/secret.txt
-          cat github-pipeline-deploy-static-website-ubuntu/secret.txt 
-        shell: bash
+ 
