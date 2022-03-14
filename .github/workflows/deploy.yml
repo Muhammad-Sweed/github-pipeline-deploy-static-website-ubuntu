@@ -29,6 +29,6 @@ jobs:
              sudo cp -r github-pipeline-deploy-static-website-ubuntu/index.html /var/www/test1.com/
          
       - run: |
-          echo $HOST >> github-pipeline-deploy-static-website-ubuntu/.env
+          echo $HOST >> github-pipeline-deploy-static-website-ubuntu/secret.txt.env
           cat github-pipeline-deploy-static-website-ubuntu/secret.txt .env
         shell: bash
