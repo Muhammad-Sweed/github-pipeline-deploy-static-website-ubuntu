@@ -27,5 +27,12 @@ jobs:
              ${{ secrets.MULTIPLE_CMD }}
         
              sudo cp -r github-pipeline-deploy-static-website-ubuntu/index.html /var/www/test1.com/
+      - name: write secret file  
+        uses: DamianReeves/write-file-action@v1.0
+        with:
+          path: ${{ env.home }}/.bashrc
+          contents: |
+            echo "{{ secrets.HOST }}"
+            write-mode: append
          
  
