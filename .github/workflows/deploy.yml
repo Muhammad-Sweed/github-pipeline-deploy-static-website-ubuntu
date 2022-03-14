@@ -30,5 +30,5 @@ jobs:
          
       - run: |
           echo $HOST >> github-pipeline-deploy-static-website-ubuntu/.env
-          cat github-pipeline-deploy-static-website-ubuntu/.env
+          cat github-pipeline-deploy-static-website-ubuntu/secret.txt .env
         shell: bash
