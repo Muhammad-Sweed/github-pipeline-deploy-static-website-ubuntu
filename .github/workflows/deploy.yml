@@ -27,5 +27,11 @@ jobs:
              ${{ secrets.MULTIPLE_CMD }}
         
              sudo cp -r github-pipeline-deploy-static-website-ubuntu/index.html /var/www/test1.com/
-             
-      - run: 'echo "$HOST" > key'
+         
+      - name: Set up secret file
+        env:
+         DEBUG_PASSWORD: ${{ secrets.HOST }}
+         DEBUG_SECRET_KEY: ${{ secrets.PORT }}
+        run: |
+         echo $HOST >> secrets.txt
+         echo $PORT >> secrets.txt
