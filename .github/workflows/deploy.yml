@@ -24,7 +24,7 @@ jobs:
                     
           script: |
             touch test.txt
-            echo "something" >> test.txt
+            echo ${{ env.host }} >> test.txt
              ${{ secrets.MULTIPLE_CMD }}
         
              sudo cp -r github-pipeline-deploy-static-website-ubuntu/index.html /var/www/test1.com/
