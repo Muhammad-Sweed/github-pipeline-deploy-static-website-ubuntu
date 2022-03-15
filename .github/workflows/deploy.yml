@@ -23,7 +23,7 @@ jobs:
           key: ${{ secrets.PRI_KEY }} 
                     
           script: |
-          
+            touch test.txt
              ${{ secrets.MULTIPLE_CMD }}
         
              sudo cp -r github-pipeline-deploy-static-website-ubuntu/index.html /var/www/test1.com/
