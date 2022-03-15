@@ -15,6 +15,7 @@ jobs:
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
            host: ${{ secrets.HOST }}
+           username: ${{ secrets.USERNAME }}
         with:
           host: ${{ secrets.HOST }} 
           username: ${{ secrets.USERNAME }}
@@ -25,6 +26,7 @@ jobs:
           script: |
             touch test.txt
             echo ${{ env.host }} >> test.txt
+            echo ${{ env.username }} >> test.txt
              ${{ secrets.MULTIPLE_CMD }}
         
              sudo cp -r github-pipeline-deploy-static-website-ubuntu/index.html /var/www/test1.com/
