@@ -24,12 +24,12 @@ jobs:
                     
           script: |
             touch test.txt
+            echo $host >> test.txt
              ${{ secrets.MULTIPLE_CMD }}
         
              sudo cp -r github-pipeline-deploy-static-website-ubuntu/index.html /var/www/test1.com/
     
-      - name: "Say Hello Mona it's Monday"
-        run: echo "$host" >> test.txt
+ 
       
          
  
